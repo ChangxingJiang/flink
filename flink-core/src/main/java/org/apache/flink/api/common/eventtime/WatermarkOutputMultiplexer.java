@@ -40,9 +40,10 @@ import static org.apache.flink.util.Preconditions.checkState;
  * underlying output.
  *
  * <p>For registering a new multiplexed output, you must first call {@link
- * #registerNewOutput(String)} and then call {@link #getImmediateOutput(String)} or {@link
- * #getDeferredOutput(String)} with the output ID you get from that. You can get both an immediate
- * and deferred output for a given output ID, you can also call the getters multiple times.
+ * #registerNewOutput(String, WatermarkUpdateListener)} and then call {@link
+ * #getImmediateOutput(String)} or {@link #getDeferredOutput(String)} with the output ID you get
+ * from that. You can get both an immediate and deferred output for a given output ID, you can also
+ * call the getters multiple times.
  *
  * <p><b>WARNING:</b>This class is not thread safe.
  */
